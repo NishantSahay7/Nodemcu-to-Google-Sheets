@@ -5,7 +5,7 @@ function doGet(e) {
     result = 'No Parameters';
   }
   else {
-    var sheet_id = '1iVKj3lWCNOxOD4G5maMidmhARo9O7Ik_j_IuLiIX03E'; 		// Spreadsheet ID
+    var sheet_id = 'Enter your Sheet ID Here'; 		// Spreadsheet ID
     var sheet = SpreadsheetApp.openById(sheet_id).getActiveSheet();		// get Active sheet
     var newRow = sheet.getLastRow() + 1;						
     var rowData = [];
@@ -18,41 +18,13 @@ function doGet(e) {
       var value = stripQuotes(e.parameter[param]);
       Logger.log(param + ':' + e.parameter[param]);
       switch (param) {
-        case 'ab': //Parameter
+        case 'ab': //Parameter 1
           rowData[2] = value; //Value in column A
           result = 'Written on column A';
           break;
-        case 'cd': //Parameter
+        case 'cd': //Parameter 2
           rowData[3] = value; //Value in column B
-          result += 'Written on column B';
-          break;
-        case 'ef': //Parameter
-          rowData[4] = value; //Value in column C
-          result += 'Written on column C';
-          break;
-        case 'gh': //Parameter
-          rowData[5] = value; //Value in column D
-          result += ' ,Written on column D';
-          break;
-        case 'ij': //Parameter
-          rowData[6] = value; //Value in column E
-          result += ' ,Written on column E';
-          break;
-        case 'kl': //Parameter
-          rowData[7] = value; //Value in column F
-          result += ' ,Written on column F';
-          break;
-        case 'mn': //Parameter
-          rowData[8] = value; //Value in column G
-          result += ' ,Written on column G';
-          break;
-        case 'op': //Parameter
-          rowData[9] = value; //Value in column H
-          result += ' ,Written on column H';
-          break;
-        case 'qr': //Parameter
-          rowData[10] = value; //Value in column I
-          result += ' ,Written on column I';
+          result += ' Written on column B';
           break;
         default:
           result = "unsupported parameter";
