@@ -18,15 +18,15 @@ function doGet(e) {
       var value = stripQuotes(e.parameter[param]);
       Logger.log(param + ':' + e.parameter[param]);
       switch (param) {
-        case 'value1': //Parameter 1
+        case 'value1': //Parameter 1, It has to be updated in Column in Sheets in the code, orderwise
           rowData[2] = value; //Value in column A
           result = 'Written on column A';
           break;
-        case 'value2': //Parameter 2
+        case 'value2': //Parameter 2, It has to be updated in Column in Sheets in the code, orderwise
           rowData[3] = value; //Value in column B
           result += ' Written on column B';
           break;
-        case 'value3': //Parameter 3
+        case 'value3': //Parameter 3, It has to be updated in Column in Sheets in the code, orderwise
           rowData[4] = value; //Value in column C
           result += ' Written on column C';
           break;
