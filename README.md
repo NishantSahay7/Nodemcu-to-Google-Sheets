@@ -2,6 +2,8 @@
 
 Full tutorial : https://bit.ly/2ZQulYc
 
+Trigger GoogleSheets Library is self written by me and free to use.
+
 How to use Trigger GoogleSheets Library: 
 
 1. Initialization: 
