@@ -1,17 +1,16 @@
-#ifndef __TRIGGER_GOOGLESHEETS_H__
-#define __TRIGGER_GOOGLESHEETS_H__
+#ifndef _TRIGGER_GOOGLESHEETS_H_
+#define _TRIGGER_GOOGLESHEETS_H_
 
 #include <stdarg.h>
 #include <string.h>
 
-
 void sheets_initialization();
 void Send_Data();
-void Google_Sheets_Init(char array_2d[10][20], String sheets_gas_id, int param_size);
+void Google_Sheets_Init(char array_2d[10][6], String sheets_gas_id, int param_size);
 
 String url;
 
-char column_name[ ][20]={"temperature","humidity"};;
+char column_name[ ][6]={"x","y"};;
 
 double random_values[100];
 
@@ -24,14 +23,14 @@ const char* fingerprint = "46 B2 C3 44 9C 59 09 8B 01 B6 F8 BD 4C FB 00 74 91 2F
 String GAS_ID;
 int Count;
 
-void Google_Sheets_Init(char test[ ][20], String sheets_gas_id, int param_size)
+void Google_Sheets_Init(char test[ ][6], String sheets_gas_id, int param_size)
 {
 	GAS_ID = sheets_gas_id;
 	Count = param_size;
 	
 	for (int i = 0; i < Count; i++)
     {
-	 for (int j = 0; j < 20; j++)
+	 for (int j = 0; j < 6; j++)
      {
 		column_name[i][j] = test[i][j];
      }
@@ -44,7 +43,6 @@ void Google_Sheets_Init(char test[ ][20], String sheets_gas_id, int param_size)
 			Serial.println(column_name[i]);
 	   }
    #endif
-	
 }
 
 void Data_to_Sheets(int num, ...)
