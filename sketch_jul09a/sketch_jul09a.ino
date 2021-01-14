@@ -2,7 +2,7 @@
 #include "TRIGGER_GOOGLESHEETS.h"       /*Library file for Google Sheets, has to be used after Wi-Fi Client Secure declaration, here everything is in Trigger_WIFI.h, so using it after Trigger_WIFI.h*/ 
 
 /**********Google Sheets Definations***********/
-char column_name_in_sheets[ ][20] = {"value1","value2","value3"};                        /*1. The Total no of column depends on how many value you have created in Script of Sheets;2. It has to be in order as per the rows decided in google sheets*/
+char column_name_in_sheets[ ][6] = {"value1","value2","value3"};                        /*1. The Total no of column depends on how many value you have created in Script of Sheets;2. It has to be in order as per the rows decided in google sheets*/
 String Sheets_GAS_ID = "Enter your GAS ID Here";                                         /*This is the Sheets GAS ID, you need to look for your sheets id*/
 int No_of_Parameters = 3;                                                                /*Here No_of_Parameters decides how many parameters you want to send it to Google Sheets at once, change it according to your needs*/
 /*********************************************/
