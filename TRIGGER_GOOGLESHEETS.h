@@ -10,7 +10,7 @@ void Google_Sheets_Init(char array_2d[10][6], String sheets_gas_id, int param_si
 
 String url;
 
-char column_name[ ][6]={"x","y"};;
+char column_name[ ][20]={"x","y"};;
 
 double random_values[100];
 
@@ -23,7 +23,7 @@ const char* fingerprint = "46 B2 C3 44 9C 59 09 8B 01 B6 F8 BD 4C FB 00 74 91 2F
 String GAS_ID;
 int Count;
 
-void Google_Sheets_Init(char test[ ][6], String sheets_gas_id, int param_size)
+void Google_Sheets_Init(char test[ ][20], String sheets_gas_id, int param_size)
 {
 	GAS_ID = sheets_gas_id;
 	Count = param_size;
